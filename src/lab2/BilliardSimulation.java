@@ -40,7 +40,7 @@ class Ball {
 }
 
 public class BilliardSimulation extends JPanel implements ActionListener {
-    private final int width = 800, height = 400;
+    private int width = 800, height = 400;
     private final List<Ball> balls = new ArrayList<>();
 
     public BilliardSimulation() {
@@ -50,6 +50,7 @@ public class BilliardSimulation extends JPanel implements ActionListener {
         balls.add(new Ball(400, 250, -8, -12, Color.BLACK));
         balls.add(new Ball(500, 250, -8, 12, Color.MAGENTA));
         balls.add(new Ball(600, 350, 8, -14, Color.PINK));
+        balls.add(new Ball(700, 350, -8, 12, Color.GREEN));
 
         Timer timer = new Timer(16, this);
         timer.start();
@@ -58,7 +59,12 @@ public class BilliardSimulation extends JPanel implements ActionListener {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.setColor(Color.GREEN);
+
+        Dimension size = getSize();
+        width = size.width;
+        height = size.height;
+
+        g.setColor(new Color(0, 150, 0));
         g.fillRect(0, 0, width, height);
 
         for (Ball ball : balls) {

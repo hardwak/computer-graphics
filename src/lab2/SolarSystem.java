@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SolarSystem extends JPanel {
-    private final int sunX = 400, sunY = 400;
+    private int sunX = 400, sunY = 400;
     private double mercuryAngle = 0;
     private double venusAngle = 1;
     private double earthAngle = 3;
@@ -18,7 +18,7 @@ public class SolarSystem extends JPanel {
     private final int mercuryOrbitRadius = 50;
     private final int venusOrbitRadius = 80;
     private final int earthOrbitRadius = 110;
-    private final int moonOrbitRadius = 20;
+    private final int moonOrbitRadius = 70;
     private final int marsOrbitRadius = 150;
     private final int jupiterOrbitRadius = 200;
     private final int saturnOrbitRadius = 250;
@@ -31,7 +31,7 @@ public class SolarSystem extends JPanel {
             mercuryAngle += 0.1;
             venusAngle += 0.07;
             earthAngle += 0.05;
-            moonAngle += 0.2;
+            moonAngle += 0.02;
             marsAngle += 0.03;
             jupiterAngle += 0.02;
             saturnAngle += 0.015;
@@ -45,6 +45,11 @@ public class SolarSystem extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+
+        Dimension size = getSize();
+        sunX = size.width / 2;
+        sunY = size.height / 2;
+
 
         g.setColor(Color.YELLOW);
         g.fillOval(sunX - 20, sunY - 20, 40, 40);
@@ -89,7 +94,7 @@ public class SolarSystem extends JPanel {
         SolarSystem panel = new SolarSystem();
         frame.add(panel);
         frame.setSize(820, 840);
-        frame.setResizable(false);
+        //frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }

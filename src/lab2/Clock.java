@@ -54,12 +54,14 @@ class DrawWndPane extends JPanel {
         setBackground(new Color(200, 200, 255));
         calendar = new GregorianCalendar();
 
-        if (args.length < 2) {
-            throw new IllegalArgumentException("Usage: java lab2/Clock <amplitude:int> <period:double>");
-        }
-
-        amplitude = Integer.parseInt(args[0]);
-        period = Double.parseDouble(args[1]);
+//        if (args.length < 2) {
+//            throw new IllegalArgumentException("Usage: java lab2/Clock <amplitude:int> <period:double>");
+//        }
+//
+//        amplitude = Integer.parseInt(args[0]);
+//        period = Double.parseDouble(args[1]);
+        amplitude = 30;
+        period = 4.0;
     }
 
     public void DrawGauge(double angle, Graphics g) {
