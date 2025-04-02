@@ -1,4 +1,4 @@
-package lab2;
+package animations;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package lab2;
+package animations;
 
 import java.util.Calendar;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package lab1;
+package procedural_figures;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
