@@ -234,12 +234,15 @@ public class MyPaint extends JFrame {
                 public void mouseReleased(MouseEvent e) {
                     if (currentShape != null) {
                         updateCurrentShape(e.getPoint());
+                        if (currentShape instanceof RectangleShape) {
+                            ((RectangleShape) currentShape).normalizeCoordinates();
+                        }
                         shapes.add(currentShape);
                         currentShape = null;
                         repaint();
                     }
 
-                    if (selectedShape != null && isResizing && selectedShape instanceof RectangleShape) {
+                    if (selectedShape != null && selectedShape instanceof RectangleShape) {
                         ((RectangleShape) selectedShape).normalizeCoordinates();
                     }
 
