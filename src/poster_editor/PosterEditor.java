@@ -319,14 +319,25 @@ public class PosterEditor extends JFrame {
                 file = new File(path);
             }
 
-            try {
-                posterPanel.exportImage(file);
-                JOptionPane.showMessageDialog(this, "Image exported successfully!");
-            } catch (Exception e) {
-                e.printStackTrace();
-                JOptionPane.showMessageDialog(this,
-                        "Error while saving poster: " + e.getMessage(),
-                        "Error", JOptionPane.ERROR_MESSAGE);
+
+            String input = JOptionPane.showInputDialog(this,
+                    "Enter export resolution (width x height). Current:",
+                    posterPanel.getWidth() + "x" + posterPanel.getHeight());
+
+            if (input != null && !input.isEmpty()) {
+                try {
+                    String[] parts = input.split("x");
+                    int width = Integer.parseInt(parts[0].trim());
+                    int height = Integer.parseInt(parts[1].trim());
+
+                    posterPanel.exportImage(file, width, height);
+                    JOptionPane.showMessageDialog(this, "Image exported successfully!");
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(this,
+                            "Error: Please enter resolution in format widthxheight",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         }
     }
