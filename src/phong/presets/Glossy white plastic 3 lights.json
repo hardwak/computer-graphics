@@ -1,0 +1,29 @@
+{
+  "lights": [
+    {
+      "location": [0, 23, 15],
+      "intensity": [0.7, 0, 0]
+    },
+    {
+      "location": [-20, -11.5, 15],
+      "intensity": [0, 0.7, 0]
+    },
+    {
+      "location": [20, -11.5, 15],
+      "intensity": [0, 0, 0.7]
+    }
+  ],
+  "ambientIntensity": [0.2, 0.2, 0.2],
+  "attenuation": [1, 0, 0],
+  "material": {
+    "diffuseReflection": [0.95, 0.95, 0.95],
+    "specularReflection": [0.3, 0.3, 0.3],
+    "glossiness": 10,
+    "ambientLightReflection": [0.6, 0.6, 0.6],
+    "selfLuminance": [0, 0, 0]
+  },
+
+  "width": 800,
+  "height": 800,
+  "name": "Glossy white plastic 3 lights"
+}

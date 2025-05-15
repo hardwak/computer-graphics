@@ -1,0 +1,27 @@
+{
+  "lights": [
+    {
+      "location": [0, 100, 20],
+      "intensity": [0.5, 0.5, 0.5]
+    },
+    {
+      "location": [40, -30, 10],
+      "intensity": [0.1, 0.1, 0.1]
+    }
+  ],
+
+  "ambientIntensity": [0.2, 0.2, 0.2],
+  "attenuation": [1, 0.001, 0],
+
+  "material": {
+    "diffuseReflection": [0.8, 0.05, 0.05],
+    "specularReflection": [0.1, 0.1, 0.1],
+    "glossiness": 5,
+    "ambientLightReflection": [0.7, 0.04, 0.04],
+    "selfLuminance": [0, 0, 0]
+  },
+
+  "width": 800,
+  "height": 800,
+  "name": "Matte green plastic"
+}

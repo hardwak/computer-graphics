@@ -1,0 +1,21 @@
+{
+  "lights": [
+    {
+      "location": [20, 30, 30],
+      "intensity": [0.7, 0.7, 0.7]
+    }
+  ],
+  "ambientIntensity": [0.2, 0.2, 0.2],
+  "attenuation": [1, 0, 0],
+  "material": {
+    "diffuseReflection": [0.95, 0.95, 0.95],
+    "specularReflection": [0.6, 0.6, 0.6],
+    "glossiness": 10,
+    "ambientLightReflection": [0.6, 0.6, 0.6],
+    "selfLuminance": [0, 0, 0]
+  },
+
+  "width": 800,
+  "height": 800,
+  "name": "Glossy white plastic"
+}
