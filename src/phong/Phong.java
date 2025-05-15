@@ -219,13 +219,13 @@ public class Phong {
     public static void main(String[] args) throws IOException {
         String[] presetNames = {
                 "src/phong/presets/Default Gray.json",
+                "src/phong/presets/Matte red plastic.json",
                 "src/phong/presets/White gypsum plaster.json",
                 "src/phong/presets/Pink gypsum plaster.json",
                 "src/phong/presets/Cyan gypsum plaster.json",
                 "src/phong/presets/Glossy white plastic.json",
                 "src/phong/presets/Matte green plastic.json",
-                "src/phong/presets/Glossy white plastic 3 lights.json",
-                "src/phong/presets/Matte red plastic.json"
+                "src/phong/presets/Glossy white plastic 3 lights.json"
         };
 
         int width = 800;
