@@ -97,15 +97,14 @@ public class Phong {
         };
     }
 
-    // Długość wektora
     private static double vectorLength(double[] v) {
         return Math.sqrt(dotProduct(v, v));
     }
 
     private static double calculateAttenuation(double[] coefs, double distance) {
-        double c2 = coefs[2]; // Kwadratowy
-        double c1 = coefs[1]; // Liniowy
-        double c0 = coefs[0]; // Stały
+        double c2 = coefs[2];
+        double c1 = coefs[1];
+        double c0 = coefs[0];
 
         return Math.min(1.0, 1.0 / (c2 * distance * distance + c1 * distance + c0));
     }
