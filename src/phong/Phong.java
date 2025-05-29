@@ -227,9 +227,6 @@ public class Phong {
                 "src/phong/presets/Glossy white plastic 3 lights.json"
         };
 
-        int width = 800;
-        int height = 800;
-
         ObjectMapper mapper = new ObjectMapper();
 
         for (String presetName : presetNames) {
@@ -240,12 +237,11 @@ public class Phong {
                 BufferedImage renderedImage = renderScene(scene, scene.width, scene.height);
 
                 saveImage(renderedImage, scene.name);
+                showImage("src/phong/renders/Default Gray.png", scene.width, scene.height);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-
-        showImage("src/phong/renders/Default Gray.png", width, height);
     }
 
 }
