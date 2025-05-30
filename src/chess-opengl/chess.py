@@ -5,8 +5,8 @@ import math
 import sys
 
 camera_angle = 0.0
-camera_radius = 10.0
-camera_height = 8.0
+camera_radius = 8.0
+camera_height = 6.0
 animation_speed = 0.1
 
 pawns = [
@@ -40,7 +40,7 @@ def init():
 
 def setup_lights():
     glEnable(GL_LIGHT0)
-    light0_position = [-2.0, 8.0, -2.0, 1.0] # 1.0 - directional
+    light0_position = [-2.0, 8.0, -2.0, 1.0]
     light0_direction = [0.0, -1.0, 0.0]
     light0_diffuse = [0.8, 0.7, 0.6, 1.0]
     light0_specular = [1.0, 0.9, 0.8, 1.0]
@@ -134,7 +134,7 @@ def draw_pawn(is_white):
 
     glPushMatrix()
     glTranslatef(0.0, 0.4, 0.0)
-    glScalef(0.27, 0.05, 0.17)
+    glScalef(0.17, 0.05, 0.17)
     glutSolidSphere(1.0, 20, 20)
     glPopMatrix()
 
@@ -195,7 +195,7 @@ def idle():
 def main():
     glutInit(sys.argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH)
-    glutInitWindowSize(1600, 1200)
+    glutInitWindowSize(1200, 800)
     glutInitWindowPosition(100, 100)
     glutCreateWindow(b"Chess OpenGL")
 
